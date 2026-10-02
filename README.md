@@ -14,3 +14,30 @@ historical time-management techniques into one polished interface.
 ```bash
 npm install
 npm run dev
+
+Open http://localhost:3000.
+Run with Docker
+bash
+
+docker build -t chronos .
+docker run -p 3000:3000 chronos
+
+Deploy for free
+
+Connect the repo to Vercel — zero config needed. output: "standalone"
+keeps the Docker image small for other hosts (Fly, Render, Railway).
+text
+
+
+---
+
+## 4. `src/lib/`
+
+### `src/lib/utils.ts`
+```ts
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
