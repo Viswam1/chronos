@@ -19,6 +19,11 @@ Open http://localhost:3000.
 Run with Docker
 bash
 
+run this locally first
+npm install next@latest react@latest react-dom@latest
+npm ls next react react-dom
+npm install next@latest react@latest react-dom@latest
+
 docker build -t chronos .
 docker run -p 3000:3000 chronos
 
